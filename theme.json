@@ -1,0 +1,28 @@
+{
+  "background":     "#ffffff",
+  "cardColor":      "#ffffff",
+  "cardWidth":      "760",
+  "cornerRadius":   "4",
+
+  "fontFamily":     "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+  "fontSizeBase":   "16",
+
+  "titleColor":     "#333333",
+  "subtitleColor":  "#666666",
+  "labelColor":     "#444444",
+
+  "fieldBackground":  "#ffffff",
+  "fieldBorder":      "#cccccc",
+  "fieldFocusBorder": "#00a3a6",
+  "fieldErrorBorder": "#e05252",
+
+  "buttonLabel":    "Continue",
+  "buttonColor":    "#00a3a6",
+  "buttonText":     "#ffffff",
+
+  "logo":           "myLogo.png",
+  "logoWidth":      "160",
+  "logoPosition":   "left",
+
+  "darkMode":       "off"
+}
