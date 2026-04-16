@@ -2,95 +2,129 @@
   "title": "Gary's Bridge Club",
   "subtitle": "Member registration",
   "submitLabel": "Register",
-
   "fields": [
     {
-      "id":       "firstname",
-      "label":    "First name",
-      "type":     "alpha-full",
+      "id": "firstname",
+      "label": "First name",
+      "type": "alpha-full",
       "required": true
     },
     {
-      "id":       "lastname",
-      "label":    "Last name",
-      "type":     "alpha-full",
+      "id": "lastname",
+      "label": "Last name",
+      "type": "alpha-full",
       "required": true
     },
     {
-      "id":       "age",
-      "label":    "Age",
-      "type":     "split",
-      "pattern":  "NN",
+      "id": "age",
+      "label": "Age",
+      "type": "split",
+      "pattern": "NN",
       "required": true
     },
     {
-      "id":       "phone",
-      "label":    "Phone",
-      "type":     "split",
-      "pattern":  "NNN NNN NNNN",
+      "id": "phone",
+      "label": "Phone",
+      "type": "split",
+      "pattern": "NNN NNN NNNN",
       "required": false
     },
     {
-      "id":    "address",
+      "id": "address",
       "label": "Address",
-      "type":  "address"
+      "type": "address"
     },
     {
-      "id":       "level",
-      "label":    "Level",
-      "type":     "radio",
+      "id": "level",
+      "label": "Level",
+      "type": "radio",
       "required": true,
       "options": [
-        { "value": "novice",       "label": "Novice"       },
-        { "value": "intermediate", "label": "Intermediate" },
-        { "value": "advanced",     "label": "Advanced"     },
-        { "value": "expert",       "label": "Expert"       }
+        {
+          "value": "novice",
+          "label": "Novice"
+        },
+        {
+          "value": "intermediate",
+          "label": "Intermediate"
+        },
+        {
+          "value": "advanced",
+          "label": "Advanced"
+        },
+        {
+          "value": "expert",
+          "label": "Expert"
+        }
       ]
     },
     {
-      "id":       "time",
-      "label":    "Time preference",
-      "type":     "checkbox",
+      "id": "time",
+      "label": "Time preference",
+      "type": "checkbox",
       "required": true,
       "options": [
-        { "value": "evening",   "label": "Evening",   "required": false },
-        { "value": "afternoon", "label": "Afternoon", "required": false },
-        { "value": "morning",   "label": "Morning",   "required": false }
+        {
+          "value": "evening",
+          "label": "Evening",
+          "required": false
+        },
+        {
+          "value": "afternoon",
+          "label": "Afternoon",
+          "required": false
+        },
+        {
+          "value": "morning",
+          "label": "Morning",
+          "required": false
+        }
       ]
     },
     {
-      "id":       "day",
-      "label":    "Day",
-      "type":     "checkbox",
+      "id": "day",
+      "label": "Day",
+      "type": "checkbox",
       "required": true,
       "options": [
-        { "value": "monday",    "label": "Monday",    "required": false },
-        { "value": "wednesday", "label": "Wednesday", "required": false },
-        { "value": "friday",    "label": "Friday",    "required": false }
+        {
+          "value": "monday",
+          "label": "Monday",
+          "required": false
+        },
+        {
+          "value": "wednesday",
+          "label": "Wednesday",
+          "required": false
+        },
+        {
+          "value": "friday",
+          "label": "Friday",
+          "required": false
+        }
       ]
     },
     {
-      "id":       "acbl",
-      "label":    "ACBL number",
-      "type":     "split",
-      "pattern":  "ANNNNN",
+      "id": "acbl",
+      "label": "ACBL number",
+      "type": "split",
+      "pattern": "ANNNNNNN",
       "required": true
     },
     {
-      "id":       "masterpoints",
-      "label":    "Masterpoints",
-      "type":     "split",
-      "pattern":  "NNNNN",
+      "id": "masterpoints",
+      "label": "Masterpoints",
+      "type": "split",
+      "pattern": "NNNNN",
       "required": false
     },
     {
-      "id":       "deposit",
-      "label":    "Deposit ($)",
-      "type":     "split",
-      "pattern":  "NN.NN",
+      "id": "deposit",
+      "label": "Deposit ($)",
+      "type": "split",
+      "pattern": "NN.NN",
       "required": false
     }
   ],
-
   "optionSets": {}
 }

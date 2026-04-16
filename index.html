@@ -378,7 +378,7 @@ function buildAddressField(def,container,focusChain,optionSets,register){
   numInp.addEventListener('keydown',e=>{ if((e.key==='Tab'||e.key==='Enter')&&numInp.value){e.preventDefault();stInp.focus();} });
   stInp.addEventListener('input',()=>clearErr(stInp));
   stInp.addEventListener('keydown',e=>{ if(e.key==='Backspace'&&stInp.value==='') numInp.focus(); });
-  unitInp.addEventListener('input',()=>clearErr(unitInp));
+  unitInp.addEventListener('input',()=>{ unitInp.value=unitInp.value.replace(/[^0-9]/g,''); clearErr(unitInp); });
   unitInp.addEventListener('keydown',e=>{ if(e.key==='Backspace'&&unitInp.value==='') stInp.focus(); });
   const getValue=()=>`${numInp.value}|${stInp.value.trim()}|${unitInp.value.trim()}`;
   const setValue=val=>{ const p=val.split('|'); numInp.value=p[0]||''; stInp.value=p[1]||''; unitInp.value=p[2]||''; [numInp,stInp,unitInp].forEach(clearErr); };
