@@ -80,14 +80,14 @@
       "id":       "masterpoints",
       "label":    "Masterpoints",
       "type":     "split",
-      "pattern":  "NNNN",
+      "pattern":  "NNNNN",
       "required": false
     },
     {
       "id":       "deposit",
       "label":    "Deposit ($)",
       "type":     "split",
-      "pattern":  "NNN.NN",
+      "pattern":  "NN.NN",
       "required": false
     }
   ],

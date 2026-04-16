@@ -370,7 +370,7 @@ function buildAddressField(def,container,focusChain,optionSets,register){
   const stInp=makeInput('seg',{type:'text',inputmode:'text',autocapitalize:'words',autocorrect:'off',spellcheck:'false',placeholder:'Street name','aria-label':'Street name',style:'flex:1;text-align:left;padding:10px 12px;font-size:16px;'});
   row1.appendChild(numInp); row1.appendChild(stInp);
   const row2=document.createElement('div'); row2.className='field-row';
-  const unitInp=makeInput('seg',{type:'text',inputmode:'text',maxlength:'8',autocapitalize:'characters',autocorrect:'off',spellcheck:'false',placeholder:'Apt / Unit','aria-label':'Unit (optional)',style:'width:110px;text-align:left;padding:10px 10px;font-size:15px;'});
+  const unitInp=makeInput('seg',{type:'text',inputmode:'numeric',maxlength:'8',autocorrect:'off',spellcheck:'false',placeholder:'Apt / Unit','aria-label':'Unit (optional)',style:'width:110px;text-align:left;padding:10px 10px;font-size:15px;'});
   const hint=document.createElement('span'); hint.className='opt-hint'; hint.textContent='optional';
   row2.appendChild(unitInp); row2.appendChild(hint);
   container.appendChild(row1); container.appendChild(row2); focusChain.push(numInp,stInp,unitInp);
