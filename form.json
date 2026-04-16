@@ -24,6 +24,13 @@
       "required": true
     },
     {
+      "id":       "phone",
+      "label":    "Phone",
+      "type":     "split",
+      "pattern":  "NNN NNN NNNN",
+      "required": false
+    },
+    {
       "id":    "address",
       "label": "Address",
       "type":  "address"
@@ -80,7 +87,7 @@
       "id":       "deposit",
       "label":    "Deposit ($)",
       "type":     "split",
-      "pattern":  "NNN NN",
+      "pattern":  "NNN.NN",
       "required": false
     }
   ],

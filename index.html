@@ -310,7 +310,7 @@ function parsePattern(pattern){
   const tokens=[]; let i=0;
   while(i<pattern.length){
     const ch=pattern[i];
-    if(ch==='-'||ch===' '){ tokens.push({kind:'sep',char:ch}); i++; continue; }
+    if(ch==='-'||ch===' '||ch==='.'){ tokens.push({kind:'sep',char:ch}); i++; continue; }
     let run=''; while(i<pattern.length&&pattern[i]===ch){ run+=ch; i++; }
     const isMonth=(ch==='M'&&run.length===3); const isAlpha=ch==='A'||isMonth; const isNum=ch==='N';
     tokens.push({kind:'seg',chars:run.length,isAlpha,isNum,isMonth,placeholder:isMonth?'MMM':run,width:Math.max(46,run.length*22+16)});
@@ -327,7 +327,7 @@ function buildSplitField(def,container,focusChain,optionSets,register){
   const row=document.createElement('div'); row.className='field-row';
   const inputs=[];
   tokens.forEach(tok=>{
-    if(tok.kind==='sep'){ const s=document.createElement('span'); s.className=tok.char==='-'?'sep':'sep-space'; if(tok.char==='-') s.textContent='-'; row.appendChild(s); return; }
+    if(tok.kind==='sep'){ const s=document.createElement('span'); s.className=(tok.char==='-'||tok.char==='.')?'sep':'sep-space'; if(tok.char==='-'||tok.char==='.') s.textContent=tok.char; row.appendChild(s); return; }
     const inp=makeInput('seg',{ type:'text', inputmode:tok.isNum?'numeric':'text', maxlength:tok.chars, placeholder:tok.placeholder, autocomplete:'off', autocorrect:'off', spellcheck:'false', style:`width:${tok.width}px;${(tok.isAlpha||tok.isMonth)?'text-transform:uppercase;':''}` });
     if(tok.isAlpha||tok.isMonth) inp.setAttribute('autocapitalize','characters');
     inputs.push({el:inp,tok}); row.appendChild(inp);
@@ -341,7 +341,7 @@ function buildSplitField(def,container,focusChain,optionSets,register){
     focusChain.push(el);
   });
   function getValue(){ let out='',si=0; tokens.forEach(tok=>{ if(tok.kind==='sep'){out+=tok.char;}else{out+=(inputs[si++]?.el.value||'');} }); return out; }
-  function setValue(val){ const clean=val.replace(/[\s\-]/g,''); let pos=0; inputs.forEach(({el,tok})=>{ el.value=clean.slice(pos,pos+tok.chars); clearErr(el); pos+=tok.chars; }); }
+  function setValue(val){ const clean=val.replace(/[\ \-\.]/g,''); let pos=0; inputs.forEach(({el,tok})=>{ el.value=clean.slice(pos,pos+tok.chars); clearErr(el); pos+=tok.chars; }); }
   function validate(){
     for(let i=0;i<inputs.length;i++){
       const {el,tok}=inputs[i]; const v=el.value.toUpperCase();
