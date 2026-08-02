@@ -1,7 +1,7 @@
 {
   "title": "Gary's Bridge Club",
   "subtitle": "Member registration",
-  "submitLabel": "Register",
+  "submitLabel": "Continue",
   "fields": [
     {
       "id": "firstname",
@@ -16,23 +16,44 @@
       "required": true
     },
     {
+      "id": "date-of-birth-msc7qnyw",
+      "label": "Date of Birth",
+      "type": "split",
+      "required": true,
+      "pattern": "NN-MMM-NNNN"
+    },
+    {
       "id": "age",
       "label": "Age",
       "type": "split",
-      "pattern": "NN",
-      "required": true
+      "required": true,
+      "pattern": "NN"
     },
     {
       "id": "phone",
       "label": "Phone",
       "type": "split",
-      "pattern": "NNN NNN NNNN",
-      "required": false
+      "required": false,
+      "pattern": "NNN NNN NNNN"
     },
     {
       "id": "address",
       "label": "Address",
-      "type": "address"
+      "type": "address",
+      "required": true
+    },
+    {
+      "id": "postal-code-msc7rvq1",
+      "label": "Postal Code",
+      "type": "split",
+      "required": true,
+      "pattern": "ANA NAN"
+    },
+    {
+      "id": "email-msc7t2q2",
+      "label": "Email",
+      "type": "email",
+      "required": true
     },
     {
       "id": "level",
@@ -108,23 +129,78 @@
       "id": "acbl",
       "label": "ACBL number",
       "type": "split",
-      "pattern": "ANNNNNNN",
-      "required": true
+      "required": true,
+      "pattern": "ANNNNNNN"
     },
     {
       "id": "masterpoints",
       "label": "Masterpoints",
       "type": "split",
-      "pattern": "NNNNN",
-      "required": false
+      "required": false,
+      "pattern": "NNNNN"
     },
     {
       "id": "deposit",
       "label": "Deposit ($)",
       "type": "split",
-      "pattern": "NN.NN",
-      "required": false
+      "required": false,
+      "pattern": "NN.NN"
     }
   ],
-  "optionSets": {}
+  "optionSets": {
+    "provinces": [
+      {
+        "value": "AB",
+        "label": "AB – Alberta"
+      },
+      {
+        "value": "BC",
+        "label": "BC – British Columbia"
+      },
+      {
+        "value": "MB",
+        "label": "MB – Manitoba"
+      },
+      {
+        "value": "NB",
+        "label": "NB – New Brunswick"
+      },
+      {
+        "value": "NL",
+        "label": "NL – Newfoundland & Labrador"
+      },
+      {
+        "value": "NS",
+        "label": "NS – Nova Scotia"
+      },
+      {
+        "value": "NT",
+        "label": "NT – Northwest Territories"
+      },
+      {
+        "value": "NU",
+        "label": "NU – Nunavut"
+      },
+      {
+        "value": "ON",
+        "label": "ON – Ontario"
+      },
+      {
+        "value": "PE",
+        "label": "PE – Prince Edward Island"
+      },
+      {
+        "value": "QC",
+        "label": "QC – Québec"
+      },
+      {
+        "value": "SK",
+        "label": "SK – Saskatchewan"
+      },
+      {
+        "value": "YT",
+        "label": "YT – Yukon"
+      }
+    ]
+  }
 }
