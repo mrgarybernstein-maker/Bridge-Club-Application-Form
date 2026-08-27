@@ -39,7 +39,7 @@
     {
       "id": "address",
       "label": "Address",
-      "type": "address",
+      "type": "big-address",
       "required": true
     },
     {
