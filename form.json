@@ -2,6 +2,7 @@
   "title": "Gary's Bridge Club",
   "subtitle": "Member registration",
   "submitLabel": "Continue",
+  "sheetsURL": "https://script.google.com/macros/s/AKfycbx9DX-eEr5UWw9ai0hTUAh3G6kV25y1pwbNttdkXQZAY-KkU6SkhlPgLeEGbsxhYu78/exec",
   "fields": [
     {
       "id": "firstname",
